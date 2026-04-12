@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Leaderboard – AlayOnline</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+ <nav class="navbar">
+ <a href="index.html" class="logo"><span class="logo-leaf">//</span> AlayOnline</a>
+ <ul class="nav-links">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="campaigns.html">Campaigns</a></li>
+ <li><a href="volunteer.html">Volunteer</a></li>
+ <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+ <li><a href="about.html">About</a></li>
+ </ul>
+ <a href="campaigns.html" class="btn-primary nav-cta">Get Started</a>
+ <button class="hamburger" id="hamburger">&#9776;</button>
+ </nav>
+
+ <section class="page-hero">
+ <div class="hero-bg-blobs">
+ <div class="blob blob-1"></div>
+ <div class="blob blob-2"></div>
+ </div>
+ <div class="page-hero-content">
+ <div class="section-label">Community Rankings</div>
+ <h1>The AlayOnline<br>Leaderboard</h1>
+ <p>Top donors, active volunteers, and loudest amplifiers — recognized monthly.</p>
+ </div>
+ </section>
+
+ <!-- TABS -->
+ <section class="section leaderboard-section">
+ <div class="lb-tabs">
+ <button class="lb-tab active" data-tab="overall"> Overall</button>
+ <button class="lb-tab" data-tab="donors"> Donors</button>
+ <button class="lb-tab" data-tab="volunteers"> Volunteers</button>
+ <button class="lb-tab" data-tab="sharers"> Amplifiers</button>
+ </div>
+
+ <!-- OVERALL TAB -->
+ <div class="lb-panel active" id="tab-overall">
+ <div class="podium-row">
+ <div class="podium-card silver">
+ <div class="podium-rank">2</div>
+ <div class="podium-avatar"></div>
+ <div class="podium-name">Maria Santos</div>
+ <div class="podium-pts">4,820 pts</div>
+ <div class="podium-badge"> Seedling Hero</div>
+ </div>
+ <div class="podium-card gold">
+ <div class="podium-rank"> 1</div>
+ <div class="podium-avatar"></div>
+ <div class="podium-name">Jose Reyes</div>
+ <div class="podium-pts">6,340 pts</div>
+ <div class="podium-badge"> Eagle Guardian</div>
+ </div>
+ <div class="podium-card bronze">
+ <div class="podium-rank">3</div>
+ <div class="podium-avatar"></div>
+ <div class="podium-name">Ana Cruz</div>
+ <div class="podium-pts">4,105 pts</div>
+ <div class="podium-badge"> Water Warrior</div>
+ </div>
+ </div>
+
+ <div class="lb-table">
+ <div class="lb-table-head">
+ <span>#</span><span>Name</span><span>Badges</span><span>Points</span><span>Level</span>
+ </div>
+ <div class="lb-row rank-4"><span class="lb-rank">4</span><span class="lb-name"> Pedro Lim</span><span></span><span>3,890 pts</span><span class="lb-level">Advanced</span></div>
+ <div class="lb-row"><span class="lb-rank">5</span><span class="lb-name"> Sofia dela Rosa</span><span></span><span>3,650 pts</span><span class="lb-level">Advanced</span></div>
+ <div class="lb-row"><span class="lb-rank">6</span><span class="lb-name"> Marco Villanueva</span><span></span><span>3,210 pts</span><span class="lb-level">Intermediate</span></div>
+ <div class="lb-row"><span class="lb-rank">7</span><span class="lb-name"> Luz Mercado</span><span></span><span>2,980 pts</span><span class="lb-level">Intermediate</span></div>
+ <div class="lb-row"><span class="lb-rank">8</span><span class="lb-name"> Rafael Garcia</span><span></span><span>2,700 pts</span><span class="lb-level">Intermediate</span></div>
+ <div class="lb-row"><span class="lb-rank">9</span><span class="lb-name"> Caridad Bautista</span><span></span><span>2,450 pts</span><span class="lb-level">Beginner</span></div>
+ <div class="lb-row"><span class="lb-rank">10</span><span class="lb-name"> Dante Aguilar</span><span></span><span>2,100 pts</span><span class="lb-level">Beginner</span></div>
+ </div>
+ </div>
+
+ <!-- DONORS TAB -->
+ <div class="lb-panel" id="tab-donors">
+ <div class="lb-table" style="margin-top:2rem">
+ <div class="lb-table-head">
+ <span>#</span><span>Name</span><span>Total Donated</span><span>Points</span>
+ </div>
+ <div class="lb-row rank-1"><span class="lb-rank"> 1</span><span class="lb-name"> Jose Reyes</span><span>₱25,000</span><span>3,200 pts</span></div>
+ <div class="lb-row rank-2"><span class="lb-rank">2</span><span class="lb-name"> Sofia dela Rosa</span><span>₱18,500</span><span>2,400 pts</span></div>
+ <div class="lb-row rank-3"><span class="lb-rank">3</span><span class="lb-name"> Pedro Lim</span><span>₱16,000</span><span>2,080 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">4</span><span class="lb-name"> Luz Mercado</span><span>₱12,200</span><span>1,586 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">5</span><span class="lb-name"> Ana Cruz</span><span>₱11,000</span><span>1,430 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">6</span><span class="lb-name"> Marco Villanueva</span><span>₱9,500</span><span>1,235 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">7</span><span class="lb-name"> Maria Santos</span><span>₱8,000</span><span>1,040 pts</span></div>
+ </div>
+ </div>
+
+ <!-- VOLUNTEERS TAB -->
+ <div class="lb-panel" id="tab-volunteers">
+ <div class="lb-table" style="margin-top:2rem">
+ <div class="lb-table-head">
+ <span>#</span><span>Name</span><span>Hours Logged</span><span>Points</span>
+ </div>
+ <div class="lb-row rank-1"><span class="lb-rank"> 1</span><span class="lb-name"> Maria Santos</span><span>48 hrs</span><span>3,840 pts</span></div>
+ <div class="lb-row rank-2"><span class="lb-rank">2</span><span class="lb-name"> Ana Cruz</span><span>36 hrs</span><span>2,880 pts</span></div>
+ <div class="lb-row rank-3"><span class="lb-rank">3</span><span class="lb-name"> Rafael Garcia</span><span>28 hrs</span><span>2,240 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">4</span><span class="lb-name"> Caridad Bautista</span><span>24 hrs</span><span>1,920 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">5</span><span class="lb-name"> Dante Aguilar</span><span>20 hrs</span><span>1,600 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">6</span><span class="lb-name"> Pedro Lim</span><span>18 hrs</span><span>1,440 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">7</span><span class="lb-name"> Jose Reyes</span><span>12 hrs</span><span>960 pts</span></div>
+ </div>
+ </div>
+
+ <!-- AMPLIFIERS TAB -->
+ <div class="lb-panel" id="tab-sharers">
+ <div class="lb-table" style="margin-top:2rem">
+ <div class="lb-table-head">
+ <span>#</span><span>Name</span><span>Campaigns Shared</span><span>Points</span>
+ </div>
+ <div class="lb-row rank-1"><span class="lb-rank"> 1</span><span class="lb-name"> Marco Villanueva</span><span>142 shares</span><span>1,420 pts</span></div>
+ <div class="lb-row rank-2"><span class="lb-rank">2</span><span class="lb-name"> Dante Aguilar</span><span>98 shares</span><span>980 pts</span></div>
+ <div class="lb-row rank-3"><span class="lb-rank">3</span><span class="lb-name"> Sofia dela Rosa</span><span>85 shares</span><span>850 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">4</span><span class="lb-name"> Maria Santos</span><span>60 shares</span><span>600 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">5</span><span class="lb-name"> Ana Cruz</span><span>55 shares</span><span>550 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">6</span><span class="lb-name"> Jose Reyes</span><span>42 shares</span><span>420 pts</span></div>
+ <div class="lb-row"><span class="lb-rank">7</span><span class="lb-name"> Luz Mercado</span><span>38 shares</span><span>380 pts</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- BADGES SHOWCASE -->
+ <section class="section badges-section">
+ <div class="section-label">Achievement System</div>
+ <h2 class="section-title">Earn Badges, Redeem Rewards</h2>
+ <div class="badges-grid">
+ <div class="badge-card">
+ <div class="badge-icon"></div>
+ <h4>Eagle Guardian</h4>
+ <p>Donated to a Biodiversity campaign</p>
+ <div class="badge-pts">+200 bonus pts</div>
+ </div>
+ <div class="badge-card">
+ <div class="badge-icon"></div>
+ <h4>Water Warrior</h4>
+ <p>Joined a Water Conservation clean-up</p>
+ <div class="badge-pts">+200 bonus pts</div>
+ </div>
+ <div class="badge-card">
+ <div class="badge-icon"></div>
+ <h4>Seedling Hero</h4>
+ <p>Participated in a planting activity</p>
+ <div class="badge-pts">+200 bonus pts</div>
+ </div>
+ <div class="badge-card">
+ <div class="badge-icon"></div>
+ <h4>Waste Buster</h4>
+ <p>Completed a waste management volunteer shift</p>
+ <div class="badge-pts">+200 bonus pts</div>
+ </div>
+ <div class="badge-card">
+ <div class="badge-icon"></div>
+ <h4>Top Donor</h4>
+ <p>Donated ₱10,000 or more in total</p>
+ <div class="badge-pts">+500 bonus pts</div>
+ </div>
+ <div class="badge-card">
+ <div class="badge-icon"></div>
+ <h4>Amplifier</h4>
+ <p>Shared 50+ campaigns to social networks</p>
+ <div class="badge-pts">+300 bonus pts</div>
+ </div>
+ <div class="badge-card">
+ <div class="badge-icon"></div>
+ <h4>90-Day Champion</h4>
+ <p>Active on the platform for 90 consecutive days</p>
+ <div class="badge-pts">+400 bonus pts</div>
+ </div>
+ <div class="badge-card">
+ <div class="badge-icon"></div>
+ <h4>Ocean Steward</h4>
+ <p>Logged 10+ hours in marine volunteer shifts</p>
+ <div class="badge-pts">+250 bonus pts</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- REWARDS -->
+ <section class="section rewards-section">
+ <div class="section-label">Redemption</div>
+ <h2 class="section-title">What Your Points Can Do</h2>
+ <div class="rewards-grid">
+ <div class="reward-card">
+ <div class="reward-pts">500 pts</div>
+ <h4>Eco-Friendly Partner Voucher</h4>
+ <p>Discount at select zero-waste stores and sustainable brands nationwide.</p>
+ </div>
+ <div class="reward-card">
+ <div class="reward-pts">1,000 pts</div>
+ <h4>Pooled Donation Boost</h4>
+ <p>Redirect your points as a donation to the month's highest-priority campaign.</p>
+ </div>
+ <div class="reward-card">
+ <div class="reward-pts">2,500 pts</div>
+ <h4>Exclusive Volunteer Kit</h4>
+ <p>Receive an AlayOnline volunteer pack — hat, reusable bag, and planting tools.</p>
+ </div>
+ <div class="reward-card">
+ <div class="reward-pts">5,000 pts</div>
+ <h4>Partner Organization Tour</h4>
+ <p>Get an exclusive behind-the-scenes visit to a partner NGO's field project.</p>
+ </div>
+ </div>
+ </section>
+
+ <footer class="footer">
+ <div class="footer-inner">
+ <div class="footer-brand">
+ <span class="logo-leaf">//</span> AlayOnline
+ <p>Alay Mula sa Puso, Abot sa Mundo.<br>A conceptual project for GES 0013.</p>
+ </div>
+ <div class="footer-links">
+ <h4>Pages</h4>
+ <a href="index.html">Home</a>
+ <a href="campaigns.html">Campaigns</a>
+ <a href="volunteer.html">Volunteer</a>
+ <a href="leaderboard.html">Leaderboard</a>
+ <a href="about.html">About</a>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>© 2026 AlayOnline · GES 0013 Environmental Science · Prof. Marlan T. Magdalaga, MSc</p>
+ </div>
+ </footer>
+
+ <script src="js/main.js"></script>
+ <script src="js/leaderboard.js"></script>
+</body>
+</html>
