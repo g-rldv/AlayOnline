@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>Campaigns – AlayOnline</title>
  <link rel="preconnect" href="https://fonts.googleapis.com">
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,11 +23,10 @@
  <button class="hamburger" id="hamburger">&#9776;</button>
  </nav>
 
+ <!-- PAGE HERO (Parallax) -->
  <section class="page-hero">
- <div class="hero-bg-blobs">
- <div class="blob blob-1"></div>
- <div class="blob blob-2"></div>
- </div>
+ <div class="page-hero-parallax-bg ph-campaigns"></div>
+ <div class="page-hero-overlay"></div>
  <div class="page-hero-content">
  <div class="section-label">Marketplace</div>
  <h1>Browse Campaigns</h1>
@@ -39,10 +38,10 @@
  <section class="filters-bar">
  <div class="filters-inner">
  <button class="filter-btn active" data-filter="all">All</button>
- <button class="filter-btn" data-filter="biodiversity"> Biodiversity</button>
- <button class="filter-btn" data-filter="water"> Water</button>
- <button class="filter-btn" data-filter="waste"> Waste</button>
- <button class="filter-btn" data-filter="community"> Community</button>
+ <button class="filter-btn" data-filter="biodiversity">🦅 Biodiversity</button>
+ <button class="filter-btn" data-filter="water">💧 Water</button>
+ <button class="filter-btn" data-filter="waste">♻️ Waste</button>
+ <button class="filter-btn" data-filter="community">🌿 Community</button>
  </div>
  <div class="search-wrap">
  <input type="text" id="searchInput" placeholder="Search campaigns…" class="search-input"/>
@@ -58,13 +57,13 @@
  <div class="cfc-body">
  <div class="cfc-top">
  <span class="camp-tag green-tag">Biodiversity</span>
- <span class="camp-tag verified-tag"> Verified</span>
+ <span class="camp-tag verified-tag">✓ Verified</span>
  </div>
  <h3>Save the Philippine Eagle</h3>
  <p>Fund GPS-tracking equipment and ranger salaries to protect the last 800 Philippine Eagles in Mindanao's forests. Data collected will inform national conservation policy.</p>
  <div class="cfc-meta-row">
- <span> Philippine Eagle Foundation</span>
- <span> Davao, Mindanao</span>
+ <span>🏛 Philippine Eagle Foundation</span>
+ <span>📍 Davao, Mindanao</span>
  </div>
  <div class="prog-bar"><div class="prog-fill" style="width:72%"></div></div>
  <div class="cfc-footer">
@@ -74,7 +73,7 @@
  </div>
  <div class="cfc-actions">
  <a href="#donate-modal" class="btn-primary btn-sm-pad" onclick="openDonate('Save the Philippine Eagle')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+ <a href="volunteer.html" class="btn-outline-dark btn-sm-pad">Volunteer</a>
  </div>
  </div>
  </div>
@@ -85,13 +84,13 @@
  <div class="cfc-body">
  <div class="cfc-top">
  <span class="camp-tag blue-tag">Water</span>
- <span class="camp-tag verified-tag"> Verified</span>
+ <span class="camp-tag verified-tag">✓ Verified</span>
  </div>
  <h3>Clean Laguna de Bay</h3>
  <p>Deploy a network of water quality sensors across Laguna de Bay and conduct monthly community clean-ups reaching 12 barangays around the lakeshore.</p>
  <div class="cfc-meta-row">
- <span> Laguna Lake Development Authority</span>
- <span> Laguna, Rizal</span>
+ <span>🏛 Laguna Lake Development Authority</span>
+ <span>📍 Laguna, Rizal</span>
  </div>
  <div class="prog-bar"><div class="prog-fill" style="width:45%"></div></div>
  <div class="cfc-footer">
@@ -101,7 +100,7 @@
  </div>
  <div class="cfc-actions">
  <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Clean Laguna de Bay')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+ <a href="volunteer.html" class="btn-outline-dark btn-sm-pad">Volunteer</a>
  </div>
  </div>
  </div>
@@ -112,13 +111,13 @@
  <div class="cfc-body">
  <div class="cfc-top">
  <span class="camp-tag brown-tag">Community</span>
- <span class="camp-tag verified-tag"> Verified</span>
+ <span class="camp-tag verified-tag">✓ Verified</span>
  </div>
  <h3>Palawan Mangrove Belt</h3>
  <p>Plant 10,000 mangrove saplings along the Palawan coastline alongside local fisherfolk communities, restoring storm barriers and fish nurseries critical to livelihoods.</p>
  <div class="cfc-meta-row">
- <span> Palawan Council for Sustainable Development</span>
- <span> Puerto Princesa, Palawan</span>
+ <span>🏛 Palawan Council for Sustainable Development</span>
+ <span>📍 Puerto Princesa, Palawan</span>
  </div>
  <div class="prog-bar"><div class="prog-fill" style="width:88%"></div></div>
  <div class="cfc-footer">
@@ -128,7 +127,7 @@
  </div>
  <div class="cfc-actions">
  <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Palawan Mangrove Belt')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+ <a href="volunteer.html" class="btn-outline-dark btn-sm-pad">Volunteer</a>
  </div>
  </div>
  </div>
@@ -138,14 +137,14 @@
  <div class="cfc-img cfi-4"></div>
  <div class="cfc-body">
  <div class="cfc-top">
- <span class="camp-tag grey-tag"> Waste</span>
- <span class="camp-tag verified-tag"> Verified</span>
+ <span class="camp-tag grey-tag">♻️ Waste</span>
+ <span class="camp-tag verified-tag">✓ Verified</span>
  </div>
  <h3>Zero Waste Cebu Barangays</h3>
  <p>Establish materials recovery facilities in 20 Cebu barangays, train waste segregation volunteers, and track monthly diversion rates to hit 70% landfill diversion by year-end.</p>
  <div class="cfc-meta-row">
- <span> EcoWaste Coalition</span>
- <span> Cebu City, Cebu</span>
+ <span>🏛 EcoWaste Coalition</span>
+ <span>📍 Cebu City, Cebu</span>
  </div>
  <div class="prog-bar"><div class="prog-fill" style="width:33%"></div></div>
  <div class="cfc-footer">
@@ -155,7 +154,7 @@
  </div>
  <div class="cfc-actions">
  <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Zero Waste Cebu Barangays')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+ <a href="volunteer.html" class="btn-outline-dark btn-sm-pad">Volunteer</a>
  </div>
  </div>
  </div>
@@ -166,13 +165,13 @@
  <div class="cfc-body">
  <div class="cfc-top">
  <span class="camp-tag blue-tag">Water</span>
- <span class="camp-tag verified-tag"> Verified</span>
+ <span class="camp-tag verified-tag">✓ Verified</span>
  </div>
  <h3>Pasig River Revive</h3>
  <p>Support floating wetland islands and bioremediation to restore water quality in the Pasig River, one of the most polluted urban waterways in Southeast Asia.</p>
  <div class="cfc-meta-row">
- <span> Pasig River Rehabilitation Commission</span>
- <span> Metro Manila, NCR</span>
+ <span>🏛 Pasig River Rehabilitation Commission</span>
+ <span>📍 Metro Manila, NCR</span>
  </div>
  <div class="prog-bar"><div class="prog-fill" style="width:55%"></div></div>
  <div class="cfc-footer">
@@ -182,7 +181,7 @@
  </div>
  <div class="cfc-actions">
  <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Pasig River Revive')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+ <a href="volunteer.html" class="btn-outline-dark btn-sm-pad">Volunteer</a>
  </div>
  </div>
  </div>
@@ -194,7 +193,7 @@
  <!-- DONATE MODAL -->
  <div class="modal-overlay" id="donateModal">
  <div class="modal">
- <button class="modal-close" onclick="closeDonate()"></button>
+ <button class="modal-close" onclick="closeDonate()">✕</button>
  <h3>Donate to <span id="modal-campaign-name"></span></h3>
  <p class="modal-sub">Choose an amount to contribute. Your donation earns AlayOnline points!</p>
  <div class="amount-options">
@@ -210,12 +209,12 @@
  </div>
 
  <!-- SUCCESS TOAST -->
- <div class="toast" id="toast"> Donation recorded! +65 points added.</div>
+ <div class="toast" id="toast">🎉 Donation recorded! +65 points added.</div>
 
  <footer class="footer">
  <div class="footer-inner">
  <div class="footer-brand">
- <span class="logo-leaf">//</span> AlayOnline
+ <a href="index.html" class="footer-brand-name"><span class="logo-leaf">//</span> AlayOnline</a>
  <p>Alay Mula sa Puso, Abot sa Mundo.<br>A conceptual project for GES 0013.</p>
  </div>
  <div class="footer-links">
