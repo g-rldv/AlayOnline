@@ -5,18 +5,18 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>AlayOnline – Marketplace for a Greener Planet</title>
  <link rel="preconnect" href="https://fonts.googleapis.com">
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
  <!-- NAV -->
  <nav class="navbar">
- <a href="AlayOnline/index.html" class="logo">
+ <a href="index.html" class="logo">
  <span class="logo-leaf">//</span> AlayOnline
  </a>
  <ul class="nav-links">
- <li><a href="AlayOnline/index.html" class="active">Home</a></li>
+ <li><a href="index.html" class="active">Home</a></li>
  <li><a href="campaigns.html">Campaigns</a></li>
  <li><a href="volunteer.html">Volunteer</a></li>
  <li><a href="leaderboard.html">Leaderboard</a></li>
@@ -26,15 +26,13 @@
  <button class="hamburger" id="hamburger">&#9776;</button>
  </nav>
 
- <!-- HERO -->
+ <!-- HERO with Parallax -->
  <section class="hero">
- <div class="hero-bg-blobs">
- <div class="blob blob-1"></div>
- <div class="blob blob-2"></div>
- <div class="blob blob-3"></div>
- </div>
+ <div class="hero-parallax-bg"></div>
+ <div class="hero-overlay"></div>
+
  <div class="hero-content">
- <span class="hero-badge">Made for the Philippines</span>
+ <span class="hero-badge">🇵🇭 Made for the Philippines</span>
  <h1 class="hero-title">Alay Mula sa Puso,<br><em>Abot sa Mundo.</em></h1>
  <p class="hero-sub">A digital marketplace that connects you to non-profit and wildlife organizations across the Philippines — donate, volunteer, or share campaigns that matter.</p>
  <div class="hero-actions">
@@ -49,12 +47,13 @@
  <div class="stat"><span class="stat-num">3-mo</span><span class="stat-label">Pilot Program</span></div>
  </div>
  </div>
+
  <div class="hero-visual">
  <div class="phone-mockup">
  <div class="phone-screen">
  <div class="phone-header">
- <span> AlayOnline</span>
- <span class="phone-pts"> 340 pts</span>
+ <span>🌿 AlayOnline</span>
+ <span class="phone-pts">⭐ 340 pts</span>
  </div>
  <div class="phone-card green">
  <div class="pc-tag">Biodiversity</div>
@@ -77,6 +76,11 @@
  </div>
  </div>
  </div>
+
+ <div class="scroll-indicator">
+ <div class="scroll-dot"></div>
+ <span>Scroll</span>
+ </div>
  </section>
 
  <!-- FOCUS AREAS -->
@@ -84,33 +88,36 @@
  <div class="section-label">What We Support</div>
  <h2 class="section-title">Four Pillars of<br>Environmental Action</h2>
  <div class="pillars-grid">
- <div class="pillar-card" data-delay="0">
- <div class="pillar-icon"></div>
+ <div class="pillar-card">
+ <span class="pillar-icon">🦅</span>
  <h3>Biodiversity Conservation</h3>
  <p>Protecting endemic species and natural habitats across the Philippine archipelago.</p>
  </div>
- <div class="pillar-card" data-delay="1">
- <div class="pillar-icon"></div>
+ <div class="pillar-card">
+ <span class="pillar-icon">💧</span>
  <h3>Water Protection</h3>
  <p>Restoring rivers, lakes, and coastal ecosystems vital to millions of Filipinos.</p>
  </div>
- <div class="pillar-card" data-delay="2">
- <div class="pillar-icon"></div>
+ <div class="pillar-card">
+ <span class="pillar-icon">♻️</span>
  <h3>Waste Management</h3>
  <p>Driving community-led clean-up initiatives and circular economy projects.</p>
  </div>
- <div class="pillar-card" data-delay="3">
- <div class="pillar-icon"></div>
+ <div class="pillar-card">
+ <span class="pillar-icon">🌱</span>
  <h3>Community Restoration</h3>
  <p>Supporting grassroots programs that rebuild ecosystems and empower local communities.</p>
  </div>
  </div>
  </section>
 
- <!-- HOW IT WORKS -->
- <section class="section how-it-works">
- <div class="section-label">The Process</div>
- <h2 class="section-title">Support in Three Steps</h2>
+ <!-- HOW IT WORKS (Parallax) -->
+ <div class="how-it-works parallax-section">
+ <div class="parallax-bg nature-bg-3"></div>
+ <div class="section-overlay" style="background: linear-gradient(135deg, rgba(10,25,15,0.82) 0%, rgba(15,60,35,0.75) 100%);"></div>
+ <div class="how-it-works-inner section-content">
+ <div class="section-label light">The Process</div>
+ <h2 class="section-title light">Support in Three Steps</h2>
  <div class="steps-row">
  <div class="step">
  <div class="step-number">01</div>
@@ -130,7 +137,8 @@
  <p>Collect points and badges, climb the leaderboard, and watch real impact grow.</p>
  </div>
  </div>
- </section>
+ </div>
+ </div>
 
  <!-- FEATURED CAMPAIGNS -->
  <section class="section featured-campaigns">
@@ -182,29 +190,43 @@
  </div>
  </section>
 
- <!-- GAMIFICATION TEASER -->
- <section class="section gamification-teaser">
+ <!-- NATURE STRIP (Parallax divider) -->
+ <div class="nature-strip parallax-section">
+ <div class="nature-strip-bg parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=1600&q=80&auto=format&fit=crop'); filter: brightness(0.35) saturate(1.4);"></div>
+ <div class="nature-strip-overlay"></div>
+ <div class="nature-strip-content section-content" style="padding: 0 6%;">
+ <h2>"The environment is where we all meet;<br>where we all have a mutual interest."</h2>
+ <p>– Lady Bird Johnson</p>
+ </div>
+ </div>
+
+ <!-- GAMIFICATION TEASER (Parallax) -->
+ <div class="gamification-teaser parallax-section">
+ <div class="parallax-bg nature-bg-1"></div>
+ <div class="section-overlay" style="background: linear-gradient(135deg, rgba(8,20,12,0.88) 0%, rgba(10,40,25,0.80) 100%);"></div>
+ <div class="gami-inner section-content">
  <div class="gami-text">
- <div class="section-label">Rewards</div>
- <h2 class="section-title">Do Good,<br>Get Recognized.</h2>
+ <div class="section-label light">Rewards</div>
+ <h2 class="section-title light">Do Good,<br>Get Recognized.</h2>
  <p>Every donation, volunteer hour, and campaign share earns you points. Unlock badges, rise on the leaderboard, and redeem rewards from eco-friendly partners.</p>
  <a href="leaderboard.html" class="btn-primary">See Leaderboard</a>
  </div>
  <div class="gami-badges">
- <div class="badge-item b1"><span>Eagle Guardian</span></div>
- <div class="badge-item b2"><span>Water Warrior</span></div>
- <div class="badge-item b3"><span>Seedling Hero</span></div>
- <div class="badge-item b4"><span>Waste Buster</span></div>
- <div class="badge-item b5"><span>Top Donor</span></div>
- <div class="badge-item b6"><span>Amplifier</span></div>
+ <div class="badge-item">🦅<span>Eagle Guardian</span></div>
+ <div class="badge-item">💧<span>Water Warrior</span></div>
+ <div class="badge-item">🌱<span>Seedling Hero</span></div>
+ <div class="badge-item">♻️<span>Waste Buster</span></div>
+ <div class="badge-item">🏆<span>Top Donor</span></div>
+ <div class="badge-item">📣<span>Amplifier</span></div>
  </div>
- </section>
+ </div>
+ </div>
 
  <!-- FOOTER -->
  <footer class="footer">
  <div class="footer-inner">
  <div class="footer-brand">
- <span class="logo-leaf">//</span> AlayOnline
+ <a href="index.html" class="footer-brand-name"><span class="logo-leaf">//</span> AlayOnline</a>
  <p>Alay Mula sa Puso, Abot sa Mundo.<br>A conceptual project for GES 0013.</p>
  </div>
  <div class="footer-links">
