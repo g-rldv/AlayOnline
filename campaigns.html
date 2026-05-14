@@ -7,232 +7,567 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/style.css">
+ <style>
+  /* SVG template image containers */
+  .cfc-img { display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .cfc-img svg { width: 100%; height: 100%; object-fit: cover; }
+ </style>
 </head>
 <body>
 
  <nav class="navbar">
- <a href="index.html" class="logo"><span class="logo-leaf">//</span> AlayOnline</a>
- <ul class="nav-links">
- <li><a href="index.html">Home</a></li>
- <li><a href="campaigns.html" class="active">Campaigns</a></li>
- <li><a href="volunteer.html">Volunteer</a></li>
- <li><a href="leaderboard.html">Leaderboard</a></li>
- <li><a href="about.html">About</a></li>
- </ul>
- <a href="campaigns.html" class="btn-primary nav-cta">Get Started</a>
- <button class="hamburger" id="hamburger">&#9776;</button>
+  <a href="index.html" class="logo"><span class="logo-leaf">//</span> AlayOnline</a>
+  <ul class="nav-links">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="campaigns.html" class="active">Campaigns</a></li>
+   <li><a href="volunteer.html">Volunteer</a></li>
+   <li><a href="leaderboard.html">Leaderboard</a></li>
+   <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="campaigns.html" class="btn-primary nav-cta">Get Started</a>
+  <button class="hamburger" id="hamburger">&#9776;</button>
  </nav>
 
  <section class="page-hero">
- <div class="hero-bg-blobs">
- <div class="blob blob-1"></div>
- <div class="blob blob-2"></div>
- </div>
- <div class="page-hero-content">
- <div class="section-label">Marketplace</div>
- <h1>Browse Campaigns</h1>
- <p>Every listing is a real cause — verified by our team, supported by science, and driven by community.</p>
- </div>
+  <div class="hero-bg-blobs">
+   <div class="blob blob-1"></div>
+   <div class="blob blob-2"></div>
+  </div>
+  <div class="page-hero-content">
+   <div class="section-label">Marketplace</div>
+   <h1>Browse Campaigns</h1>
+   <p>Every listing is a real cause — verified by our team, supported by science, and driven by community.</p>
+  </div>
  </section>
 
  <!-- FILTERS -->
  <section class="filters-bar">
- <div class="filters-inner">
- <button class="filter-btn active" data-filter="all">All</button>
- <button class="filter-btn" data-filter="biodiversity"> Biodiversity</button>
- <button class="filter-btn" data-filter="water"> Water</button>
- <button class="filter-btn" data-filter="waste"> Waste</button>
- <button class="filter-btn" data-filter="community"> Community</button>
- </div>
- <div class="search-wrap">
- <input type="text" id="searchInput" placeholder="Search campaigns…" class="search-input"/>
- </div>
+  <div class="filters-inner">
+   <button class="filter-btn active" data-filter="all">All</button>
+   <button class="filter-btn" data-filter="biodiversity"> Biodiversity</button>
+   <button class="filter-btn" data-filter="marine"> Marine</button>
+   <button class="filter-btn" data-filter="waste"> Waste</button>
+   <button class="filter-btn" data-filter="disaster"> Disaster Response</button>
+   <button class="filter-btn" data-filter="community"> Community</button>
+  </div>
+  <div class="search-wrap">
+   <input type="text" id="searchInput" placeholder="Search campaigns…" class="search-input"/>
+  </div>
  </section>
 
  <!-- CAMPAIGNS GRID -->
  <section class="section campaigns-section">
- <div class="campaigns-grid" id="campaignsGrid">
+  <div class="campaigns-grid" id="campaignsGrid">
 
- <div class="camp-full-card" data-cat="biodiversity">
- <div class="cfc-img cfi-1"></div>
- <div class="cfc-body">
- <div class="cfc-top">
- <span class="camp-tag green-tag">Biodiversity</span>
- <span class="camp-tag verified-tag"> Verified</span>
- </div>
- <h3>Save the Philippine Eagle</h3>
- <p>Fund GPS-tracking equipment and ranger salaries to protect the last 800 Philippine Eagles in Mindanao's forests. Data collected will inform national conservation policy.</p>
- <div class="cfc-meta-row">
- <span> Philippine Eagle Foundation</span>
- <span> Davao, Mindanao</span>
- </div>
- <div class="prog-bar"><div class="prog-fill" style="width:72%"></div></div>
- <div class="cfc-footer">
- <div>
- <strong>₱144,000</strong> raised of ₱200,000
- <div class="prog-label">72% · 38 days left</div>
- </div>
- <div class="cfc-actions">
- <a href="#donate-modal" class="btn-primary btn-sm-pad" onclick="openDonate('Save the Philippine Eagle')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
- </div>
- </div>
- </div>
- </div>
+   <!-- 1. Biodiversity & Forestry -->
+   <div class="camp-full-card" data-cat="biodiversity">
+    <div class="cfc-img">
+     <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <!-- Sky gradient background -->
+      <defs>
+       <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#c8e6c9"/>
+        <stop offset="100%" stop-color="#2d7a4e"/>
+       </linearGradient>
+      </defs>
+      <rect width="280" height="240" fill="url(#sky1)"/>
+      <!-- Sun -->
+      <circle cx="220" cy="50" r="28" fill="#fff9c4" opacity="0.7"/>
+      <!-- Mountains -->
+      <polygon points="0,180 70,90 140,180" fill="#1a4a2e" opacity="0.8"/>
+      <polygon points="80,180 160,70 240,180" fill="#1a4a2e" opacity="0.9"/>
+      <polygon points="150,180 210,100 280,180" fill="#0d3320" opacity="0.95"/>
+      <!-- Ground -->
+      <rect x="0" y="175" width="280" height="65" fill="#0d3320"/>
+      <!-- Trees row -->
+      <g fill="#4caf6e">
+       <polygon points="20,175 32,140 44,175"/>
+       <polygon points="50,175 64,130 78,175"/>
+       <polygon points="10,175 25,155 40,175"/>
+       <polygon points="200,175 214,138 228,175"/>
+       <polygon points="230,175 246,128 262,175"/>
+       <polygon points="245,175 258,148 271,175"/>
+      </g>
+      <!-- Seedling in foreground -->
+      <g transform="translate(120,165)">
+       <rect x="-3" y="0" width="6" height="25" rx="2" fill="#6b4226"/>
+       <ellipse cx="0" cy="-5" rx="14" ry="10" fill="#4caf6e"/>
+       <ellipse cx="-10" cy="5" rx="9" ry="6" fill="#2d7a4e"/>
+       <ellipse cx="10" cy="5" rx="9" ry="6" fill="#2d7a4e"/>
+      </g>
+      <!-- Label band -->
+      <rect x="0" y="205" width="280" height="35" fill="rgba(26,74,46,0.85)"/>
+      <text x="140" y="226" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="11" font-weight="bold">Haribon Foundation</text>
+     </svg>
+    </div>
+    <div class="cfc-body">
+     <div class="cfc-top">
+      <span class="camp-tag green-tag">Biodiversity</span>
+      <span class="camp-tag verified-tag">✓ Verified</span>
+     </div>
+     <h3>Forests for Life: Adopt-a-Seedling</h3>
+     <p>Support the restoration of denuded forests across the Sierra Madre and other vital mountain ranges. Your donation covers the cultivation, planting, and nurturing of native tree species for three years, protecting watersheds and providing habitats for endemic wildlife.</p>
+     <div class="cfc-meta-row">
+      <span>🏢 Haribon Foundation</span>
+      <span>📍 Sierra Madre &amp; Nationwide</span>
+     </div>
+     <div class="prog-bar"><div class="prog-fill" style="width:61%"></div></div>
+     <div class="cfc-footer">
+      <div>
+       <strong>₱122,000</strong> raised of ₱200,000
+       <div class="prog-label">61% · 42 days left</div>
+      </div>
+      <div class="cfc-actions">
+       <a href="#donate-modal" class="btn-primary btn-sm-pad" onclick="openDonate('Forests for Life: Adopt-a-Seedling')">Donate</a>
+       <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+      </div>
+     </div>
+    </div>
+   </div>
 
- <div class="camp-full-card" data-cat="water">
- <div class="cfc-img cfi-2"></div>
- <div class="cfc-body">
- <div class="cfc-top">
- <span class="camp-tag blue-tag">Water</span>
- <span class="camp-tag verified-tag"> Verified</span>
- </div>
- <h3>Clean Laguna de Bay</h3>
- <p>Deploy a network of water quality sensors across Laguna de Bay and conduct monthly community clean-ups reaching 12 barangays around the lakeshore.</p>
- <div class="cfc-meta-row">
- <span> Laguna Lake Development Authority</span>
- <span> Laguna, Rizal</span>
- </div>
- <div class="prog-bar"><div class="prog-fill" style="width:45%"></div></div>
- <div class="cfc-footer">
- <div>
- <strong>₱90,000</strong> raised of ₱200,000
- <div class="prog-label">45% · 52 days left</div>
- </div>
- <div class="cfc-actions">
- <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Clean Laguna de Bay')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
- </div>
- </div>
- </div>
- </div>
+   <!-- 2. Marine Conservation -->
+   <div class="camp-full-card" data-cat="marine">
+    <div class="cfc-img">
+     <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+       <linearGradient id="sea1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#b3e5fc"/>
+        <stop offset="60%" stop-color="#0277bd"/>
+        <stop offset="100%" stop-color="#01579b"/>
+       </linearGradient>
+      </defs>
+      <rect width="280" height="240" fill="url(#sea1)"/>
+      <!-- Horizon glow -->
+      <ellipse cx="140" cy="110" rx="120" ry="30" fill="#ffffff" opacity="0.08"/>
+      <!-- Waves -->
+      <path d="M0,130 Q35,115 70,130 Q105,145 140,130 Q175,115 210,130 Q245,145 280,130 L280,240 L0,240 Z" fill="#01579b" opacity="0.7"/>
+      <path d="M0,150 Q35,138 70,150 Q105,162 140,150 Q175,138 210,150 Q245,162 280,150 L280,240 L0,240 Z" fill="#0d47a1" opacity="0.6"/>
+      <!-- Fish -->
+      <g fill="#ffd54f" opacity="0.9">
+       <ellipse cx="80" cy="105" rx="15" ry="8"/>
+       <polygon points="95,105 110,97 110,113"/>
+       <ellipse cx="190" cy="90" rx="10" ry="5.5"/>
+       <polygon points="200,90 212,84 212,96"/>
+      </g>
+      <!-- Coral -->
+      <g fill="#ef5350" opacity="0.85">
+       <rect x="55" y="190" width="6" height="30" rx="3"/>
+       <circle cx="52" cy="192" r="7"/>
+       <circle cx="61" cy="188" r="8"/>
+       <circle cx="66" cy="194" r="6"/>
+       <rect x="190" y="195" width="5" height="25" rx="2.5"/>
+       <circle cx="188" cy="196" r="6"/>
+       <circle cx="195" cy="192" r="7"/>
+      </g>
+      <!-- Philippine flag motif -->
+      <rect x="115" y="45" width="55" height="35" rx="2" fill="#0038a8" opacity="0.75"/>
+      <polygon points="115,45 115,80 142,62.5" fill="#ce1126" opacity="0.85"/>
+      <circle cx="124" cy="62" r="5" fill="#fcd116" opacity="0.9"/>
+      <!-- Label band -->
+      <rect x="0" y="205" width="280" height="35" fill="rgba(1,87,155,0.88)"/>
+      <text x="140" y="226" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="10.5" font-weight="bold">Save Philippine Seas</text>
+     </svg>
+    </div>
+    <div class="cfc-body">
+     <div class="cfc-top">
+      <span class="camp-tag blue-tag">Marine</span>
+      <span class="camp-tag verified-tag">✓ Verified</span>
+     </div>
+     <h3>Akbay Dagat: West Philippine Sea Awareness</h3>
+     <p>Strengthen the protection of the country's marine frontiers by supporting educational materials and local community patrols. This initiative focuses on instilling civic awareness and nationalism through marine biodiversity education and stakeholder collaboration.</p>
+     <div class="cfc-meta-row">
+      <span>🏢 Save Philippine Seas / Iloilo Provincial Board</span>
+      <span>📍 West Philippine Sea / Iloilo</span>
+     </div>
+     <div class="prog-bar"><div class="prog-fill" style="width:48%"></div></div>
+     <div class="cfc-footer">
+      <div>
+       <strong>₱96,000</strong> raised of ₱200,000
+       <div class="prog-label">48% · 55 days left</div>
+      </div>
+      <div class="cfc-actions">
+       <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Akbay Dagat: West Philippine Sea Awareness')">Donate</a>
+       <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+      </div>
+     </div>
+    </div>
+   </div>
 
- <div class="camp-full-card" data-cat="community">
- <div class="cfc-img cfi-3"></div>
- <div class="cfc-body">
- <div class="cfc-top">
- <span class="camp-tag brown-tag">Community</span>
- <span class="camp-tag verified-tag"> Verified</span>
- </div>
- <h3>Palawan Mangrove Belt</h3>
- <p>Plant 10,000 mangrove saplings along the Palawan coastline alongside local fisherfolk communities, restoring storm barriers and fish nurseries critical to livelihoods.</p>
- <div class="cfc-meta-row">
- <span> Palawan Council for Sustainable Development</span>
- <span> Puerto Princesa, Palawan</span>
- </div>
- <div class="prog-bar"><div class="prog-fill" style="width:88%"></div></div>
- <div class="cfc-footer">
- <div>
- <strong>₱176,000</strong> raised of ₱200,000
- <div class="prog-label">88% · 14 days left</div>
- </div>
- <div class="cfc-actions">
- <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Palawan Mangrove Belt')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
- </div>
- </div>
- </div>
- </div>
+   <!-- 3. Waste Management -->
+   <div class="camp-full-card" data-cat="waste">
+    <div class="cfc-img">
+     <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+       <linearGradient id="waste1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e8f5e9"/>
+        <stop offset="100%" stop-color="#c8e6c9"/>
+       </linearGradient>
+      </defs>
+      <rect width="280" height="240" fill="url(#waste1)"/>
+      <!-- City skyline (simplified) -->
+      <rect x="20" y="120" width="30" height="80" rx="2" fill="#9e9e9e" opacity="0.5"/>
+      <rect x="60" y="100" width="25" height="100" rx="2" fill="#757575" opacity="0.5"/>
+      <rect x="200" y="110" width="28" height="90" rx="2" fill="#9e9e9e" opacity="0.5"/>
+      <rect x="235" y="95" width="22" height="105" rx="2" fill="#757575" opacity="0.5"/>
+      <!-- Ground -->
+      <rect x="0" y="195" width="280" height="45" fill="#4caf6e"/>
+      <!-- Large recycle symbol in center -->
+      <circle cx="140" cy="130" r="55" fill="#ffffff" opacity="0.6"/>
+      <text x="140" y="148" text-anchor="middle" font-size="62" fill="#2e7d32">♻</text>
+      <!-- Bins row -->
+      <g>
+       <rect x="30" y="170" width="22" height="30" rx="3" fill="#4caf6e"/>
+       <rect x="28" y="166" width="26" height="7" rx="2" fill="#388e3c"/>
+       <text x="41" y="191" text-anchor="middle" fill="white" font-size="10" font-family="sans-serif">BIO</text>
+       <rect x="85" y="170" width="22" height="30" rx="3" fill="#1976d2"/>
+       <rect x="83" y="166" width="26" height="7" rx="2" fill="#1565c0"/>
+       <text x="96" y="191" text-anchor="middle" fill="white" font-size="10" font-family="sans-serif">REC</text>
+       <rect x="170" y="170" width="22" height="30" rx="3" fill="#f57f17"/>
+       <rect x="168" y="166" width="26" height="7" rx="2" fill="#e65100"/>
+       <text x="181" y="191" text-anchor="middle" fill="white" font-size="10" font-family="sans-serif">MIX</text>
+       <rect x="225" y="170" width="22" height="30" rx="3" fill="#c62828"/>
+       <rect x="223" y="166" width="26" height="7" rx="2" fill="#b71c1c"/>
+       <text x="236" y="191" text-anchor="middle" fill="white" font-size="10" font-family="sans-serif">HAZ</text>
+      </g>
+      <!-- Label band -->
+      <rect x="0" y="205" width="280" height="35" fill="rgba(46,125,50,0.88)"/>
+      <text x="140" y="226" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="10.5" font-weight="bold">Mother Earth Foundation</text>
+     </svg>
+    </div>
+    <div class="cfc-body">
+     <div class="cfc-top">
+      <span class="camp-tag grey-tag">♻ Waste</span>
+      <span class="camp-tag verified-tag">✓ Verified</span>
+     </div>
+     <h3>Zero Waste Schools and Cities</h3>
+     <p>Empower local communities to implement strict segregation and circular economy models to eliminate plastic leakage. Funds support Waste Assessment and Brand Audits (WABA), technical workshops for local leaders, and school programs dedicated to upholding the right to a healthy environment.</p>
+     <div class="cfc-meta-row">
+      <span>🏢 Mother Earth Foundation</span>
+      <span>📍 Puerto Galera &amp; Nationwide</span>
+     </div>
+     <div class="prog-bar"><div class="prog-fill" style="width:35%"></div></div>
+     <div class="cfc-footer">
+      <div>
+       <strong>₱70,000</strong> raised of ₱200,000
+       <div class="prog-label">35% · 68 days left</div>
+      </div>
+      <div class="cfc-actions">
+       <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Zero Waste Schools and Cities')">Donate</a>
+       <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+      </div>
+     </div>
+    </div>
+   </div>
 
- <div class="camp-full-card" data-cat="waste">
- <div class="cfc-img cfi-4"></div>
- <div class="cfc-body">
- <div class="cfc-top">
- <span class="camp-tag grey-tag"> Waste</span>
- <span class="camp-tag verified-tag"> Verified</span>
- </div>
- <h3>Zero Waste Cebu Barangays</h3>
- <p>Establish materials recovery facilities in 20 Cebu barangays, train waste segregation volunteers, and track monthly diversion rates to hit 70% landfill diversion by year-end.</p>
- <div class="cfc-meta-row">
- <span> EcoWaste Coalition</span>
- <span> Cebu City, Cebu</span>
- </div>
- <div class="prog-bar"><div class="prog-fill" style="width:33%"></div></div>
- <div class="cfc-footer">
- <div>
- <strong>₱66,000</strong> raised of ₱200,000
- <div class="prog-label">33% · 70 days left</div>
- </div>
- <div class="cfc-actions">
- <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Zero Waste Cebu Barangays')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
- </div>
- </div>
- </div>
- </div>
+   <!-- 4. Disaster Response -->
+   <div class="camp-full-card" data-cat="disaster">
+    <div class="cfc-img">
+     <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+       <linearGradient id="dr1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fff8e1"/>
+        <stop offset="50%" stop-color="#ff8f00"/>
+        <stop offset="100%" stop-color="#e65100"/>
+       </linearGradient>
+      </defs>
+      <rect width="280" height="240" fill="url(#dr1)"/>
+      <!-- Sun / heat haze -->
+      <circle cx="140" cy="55" r="38" fill="#ffe082" opacity="0.85"/>
+      <circle cx="140" cy="55" r="28" fill="#ffd54f"/>
+      <!-- Heat rays -->
+      <g stroke="#ffcc02" stroke-width="2" opacity="0.5">
+       <line x1="140" y1="8" x2="140" y2="20"/>
+       <line x1="175" y1="20" x2="167" y2="28"/>
+       <line x1="190" y1="55" x2="178" y2="55"/>
+       <line x1="175" y1="90" x2="167" y2="82"/>
+       <line x1="105" y1="20" x2="113" y2="28"/>
+       <line x1="90" y1="55" x2="102" y2="55"/>
+       <line x1="105" y1="90" x2="113" y2="82"/>
+      </g>
+      <!-- Ground / field -->
+      <rect x="0" y="165" width="280" height="75" fill="#a1887f" opacity="0.6"/>
+      <!-- Cracked earth lines -->
+      <g stroke="#795548" stroke-width="1.5" fill="none" opacity="0.7">
+       <path d="M20,175 L40,185 L55,178 L70,190"/>
+       <path d="M100,180 L115,170 L130,182"/>
+       <path d="M170,175 L190,185 L205,178 L220,190"/>
+      </g>
+      <!-- Relief box / pack -->
+      <rect x="108" y="130" width="64" height="48" rx="4" fill="#ffffff" opacity="0.92"/>
+      <rect x="108" y="130" width="64" height="12" rx="4" fill="#ef5350" opacity="0.9"/>
+      <text x="140" y="141" text-anchor="middle" fill="white" font-family="sans-serif" font-size="9" font-weight="bold">RELIEF</text>
+      <text x="140" y="168" text-anchor="middle" fill="#e65100" font-size="22">🍚</text>
+      <!-- Fishing boat silhouette -->
+      <path d="M195,160 Q215,148 235,155 L240,170 L190,170 Z" fill="#5d4037" opacity="0.7"/>
+      <rect x="210" y="145" width="3" height="18" fill="#5d4037" opacity="0.7"/>
+      <!-- Label band -->
+      <rect x="0" y="205" width="280" height="35" fill="rgba(198,40,40,0.88)"/>
+      <text x="140" y="226" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="10.5" font-weight="bold">GMA Kapuso Foundation</text>
+     </svg>
+    </div>
+    <div class="cfc-body">
+     <div class="cfc-top">
+      <span class="camp-tag" style="background:#fff3e0;color:#e65100;">🆘 Disaster Response</span>
+      <span class="camp-tag verified-tag">✓ Verified</span>
+     </div>
+     <h3>Operation Bayanihan: Relief for Farmers and Fishermen</h3>
+     <p>Provide critical food packs and logistical support to vegetable farmers and small-scale fishermen hit by extreme heat and rising fuel costs. This mission ensures that those feeding the nation receive immediate relief during periods of economic and environmental hardship.</p>
+     <div class="cfc-meta-row">
+      <span>🏢 GMA Kapuso Foundation</span>
+      <span>📍 Zambales, Oriental Mindoro, &amp; Mt. Province</span>
+     </div>
+     <div class="prog-bar"><div class="prog-fill" style="width:79%"></div></div>
+     <div class="cfc-footer">
+      <div>
+       <strong>₱158,000</strong> raised of ₱200,000
+       <div class="prog-label">79% · 18 days left</div>
+      </div>
+      <div class="cfc-actions">
+       <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Operation Bayanihan: Relief for Farmers and Fishermen')">Donate</a>
+       <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+      </div>
+     </div>
+    </div>
+   </div>
 
- <div class="camp-full-card" data-cat="water">
- <div class="cfc-img cfi-6"></div>
- <div class="cfc-body">
- <div class="cfc-top">
- <span class="camp-tag blue-tag">Water</span>
- <span class="camp-tag verified-tag"> Verified</span>
- </div>
- <h3>Pasig River Revive</h3>
- <p>Support floating wetland islands and bioremediation to restore water quality in the Pasig River, one of the most polluted urban waterways in Southeast Asia.</p>
- <div class="cfc-meta-row">
- <span> Pasig River Rehabilitation Commission</span>
- <span> Metro Manila, NCR</span>
- </div>
- <div class="prog-bar"><div class="prog-fill" style="width:55%"></div></div>
- <div class="cfc-footer">
- <div>
- <strong>₱110,000</strong> raised of ₱200,000
- <div class="prog-label">55% · 44 days left</div>
- </div>
- <div class="cfc-actions">
- <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Pasig River Revive')">Donate</a>
- <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
- </div>
- </div>
- </div>
- </div>
+   <!-- 5. Child Welfare & Environment -->
+   <div class="camp-full-card" data-cat="community">
+    <div class="cfc-img">
+     <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+       <linearGradient id="child1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fce4ec"/>
+        <stop offset="100%" stop-color="#f8bbd0"/>
+       </linearGradient>
+      </defs>
+      <rect width="280" height="240" fill="url(#child1)"/>
+      <!-- Running path oval -->
+      <ellipse cx="140" cy="155" rx="110" ry="55" fill="none" stroke="#f48fb1" stroke-width="8" opacity="0.5"/>
+      <!-- Children silhouettes running -->
+      <g fill="#ad1457" opacity="0.8">
+       <!-- Child 1 -->
+       <circle cx="75" cy="115" r="9"/>
+       <rect x="70" y="124" width="10" height="22" rx="4"/>
+       <line x1="68" y1="130" x2="58" y2="140" stroke="#ad1457" stroke-width="3" stroke-linecap="round"/>
+       <line x1="80" y1="130" x2="88" y2="138" stroke="#ad1457" stroke-width="3" stroke-linecap="round"/>
+       <!-- Child 2 -->
+       <circle cx="140" cy="108" r="9"/>
+       <rect x="135" y="117" width="10" height="22" rx="4"/>
+       <line x1="133" y1="123" x2="123" y2="133" stroke="#ad1457" stroke-width="3" stroke-linecap="round"/>
+       <line x1="145" y1="123" x2="153" y2="131" stroke="#ad1457" stroke-width="3" stroke-linecap="round"/>
+       <!-- Child 3 -->
+       <circle cx="205" cy="115" r="9"/>
+       <rect x="200" y="124" width="10" height="22" rx="4"/>
+       <line x1="198" y1="130" x2="188" y2="140" stroke="#ad1457" stroke-width="3" stroke-linecap="round"/>
+       <line x1="210" y1="130" x2="218" y2="138" stroke="#ad1457" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <!-- Heart shield icon center top -->
+      <circle cx="140" cy="55" r="32" fill="#ffffff" opacity="0.75"/>
+      <text x="140" y="71" text-anchor="middle" font-size="36" fill="#e91e63">🛡</text>
+      <!-- Finish banner -->
+      <rect x="50" y="168" width="180" height="18" rx="3" fill="#e91e63" opacity="0.85"/>
+      <text x="140" y="181" text-anchor="middle" fill="white" font-family="sans-serif" font-size="9.5" font-weight="bold">BANTAY BATA VIRTUAL RUN</text>
+      <!-- Label band -->
+      <rect x="0" y="205" width="280" height="35" fill="rgba(136,14,79,0.88)"/>
+      <text x="140" y="226" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="10.5" font-weight="bold">ABS-CBN Foundation</text>
+     </svg>
+    </div>
+    <div class="cfc-body">
+     <div class="cfc-top">
+      <span class="camp-tag brown-tag">Community</span>
+      <span class="camp-tag verified-tag">✓ Verified</span>
+     </div>
+     <h3>Bantay Bata Superhero Virtual Run</h3>
+     <p>Be a hero for Filipino children by participating in a virtual run to fund child protection training in far-flung communities. Contributions help create safe spaces where children can grow and thrive, away from the threats of abuse and neglect.</p>
+     <div class="cfc-meta-row">
+      <span>🏢 ABS-CBN Foundation</span>
+      <span>📍 Nationwide (Virtual)</span>
+     </div>
+     <div class="prog-bar"><div class="prog-fill" style="width:54%"></div></div>
+     <div class="cfc-footer">
+      <div>
+       <strong>₱108,000</strong> raised of ₱200,000
+       <div class="prog-label">54% · 46 days left</div>
+      </div>
+      <div class="cfc-actions">
+       <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Bantay Bata Superhero Virtual Run')">Donate</a>
+       <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+      </div>
+     </div>
+    </div>
+   </div>
 
- </div>
+   <!-- 6. Urgent Community Restoration / Disaster -->
+   <div class="camp-full-card" data-cat="disaster">
+    <div class="cfc-img">
+     <svg viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+       <linearGradient id="vol1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ffd7c4"/>
+        <stop offset="60%" stop-color="#bf360c"/>
+        <stop offset="100%" stop-color="#870000"/>
+       </linearGradient>
+       <radialGradient id="glow1" cx="50%" cy="40%" r="40%">
+        <stop offset="0%" stop-color="#ffcc80" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="transparent"/>
+       </radialGradient>
+      </defs>
+      <rect width="280" height="240" fill="url(#vol1)"/>
+      <rect width="280" height="240" fill="url(#glow1)"/>
+      <!-- Volcanic mountain -->
+      <polygon points="140,30 230,200 50,200" fill="#4e342e"/>
+      <polygon points="140,30 170,100 110,100" fill="#6d4c41"/>
+      <!-- Lava flows -->
+      <path d="M140,80 Q155,120 160,160 Q165,185 175,200 L155,200 Q145,180 140,155 Q135,130 130,100 Z" fill="#ff6d00" opacity="0.85"/>
+      <path d="M140,80 Q125,120 118,155 Q112,180 108,200 L125,200 Q130,175 133,155 Q137,130 140,105 Z" fill="#ff8f00" opacity="0.7"/>
+      <!-- Smoke clouds -->
+      <g fill="#bdbdbd" opacity="0.6">
+       <ellipse cx="135" cy="22" rx="18" ry="10"/>
+       <ellipse cx="148" cy="16" rx="14" ry="8"/>
+       <ellipse cx="124" cy="18" rx="12" ry="7"/>
+       <ellipse cx="158" cy="22" rx="10" ry="6"/>
+      </g>
+      <!-- Displaced families / tents at base -->
+      <g fill="#ffffff" opacity="0.85">
+       <!-- Tent 1 -->
+       <polygon points="42,192 58,175 74,192"/>
+       <rect x="49" y="183" width="14" height="9" fill="#eeeeee"/>
+       <!-- Tent 2 -->
+       <polygon points="185,192 201,175 217,192"/>
+       <rect x="192" y="183" width="14" height="9" fill="#eeeeee"/>
+       <!-- Tent 3 -->
+       <polygon points="220,192 236,178 252,192"/>
+       <rect x="227" y="184" width="14" height="8" fill="#eeeeee"/>
+      </g>
+      <!-- Urgent ribbon -->
+      <rect x="0" y="58" width="90" height="20" rx="0" fill="#c62828" opacity="0.92"/>
+      <text x="8" y="73" fill="white" font-family="sans-serif" font-size="10" font-weight="bold">⚠ URGENT</text>
+      <!-- Label band -->
+      <rect x="0" y="205" width="280" height="35" fill="rgba(136,14,14,0.9)"/>
+      <text x="140" y="226" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="10.5" font-weight="bold">ABS-CBN Foundation</text>
+     </svg>
+    </div>
+    <div class="cfc-body">
+     <div class="cfc-top">
+      <span class="camp-tag" style="background:#ffebee;color:#b71c1c;">⚠ Urgent</span>
+      <span class="camp-tag verified-tag">✓ Verified</span>
+     </div>
+     <h3>Sagip Kapamilya: Mayon Volcano Emergency Aid</h3>
+     <p>Deliver essential relief packs and clean drinking water to hundreds of families currently displaced by Mayon Volcano's ongoing activity. Your support provides immediate life-saving supplies to communities in Albay facing the constant threat of volcanic hazards.</p>
+     <div class="cfc-meta-row">
+      <span>🏢 ABS-CBN Foundation</span>
+      <span>📍 Camalig &amp; Guinobatan, Albay</span>
+     </div>
+     <div class="prog-bar"><div class="prog-fill" style="width:91%"></div></div>
+     <div class="cfc-footer">
+      <div>
+       <strong>₱182,000</strong> raised of ₱200,000
+       <div class="prog-label">91% · 8 days left</div>
+      </div>
+      <div class="cfc-actions">
+       <a href="#" class="btn-primary btn-sm-pad" onclick="openDonate('Sagip Kapamilya: Mayon Volcano Emergency Aid')">Donate</a>
+       <a href="volunteer.html" class="btn-outline btn-sm-pad">Volunteer</a>
+      </div>
+     </div>
+    </div>
+   </div>
+
+  </div>
  </section>
 
  <!-- DONATE MODAL -->
  <div class="modal-overlay" id="donateModal">
- <div class="modal">
- <button class="modal-close" onclick="closeDonate()"></button>
- <h3>Donate to <span id="modal-campaign-name"></span></h3>
- <p class="modal-sub">Choose an amount to contribute. Your donation earns AlayOnline points!</p>
- <div class="amount-options">
- <button class="amount-btn" onclick="selectAmount(this, 50)">₱50 <small>+10 pts</small></button>
- <button class="amount-btn" onclick="selectAmount(this, 100)">₱100 <small>+25 pts</small></button>
- <button class="amount-btn" onclick="selectAmount(this, 250)">₱250 <small>+65 pts</small></button>
- <button class="amount-btn" onclick="selectAmount(this, 500)">₱500 <small>+130 pts</small></button>
- </div>
- <input type="number" id="custom-amount" placeholder="Or enter custom amount (₱)" class="custom-input"/>
- <button class="btn-primary w100" onclick="confirmDonate()">Confirm Donation</button>
- <p class="modal-note">This is a static demo — no real transaction is processed.</p>
- </div>
+  <div class="modal">
+   <button class="modal-close" onclick="closeDonate()">✕</button>
+   <h3>Donate to <span id="modal-campaign-name"></span></h3>
+   <p class="modal-sub">Choose an amount to contribute. Your donation earns AlayOnline points!</p>
+   <div class="amount-options">
+    <button class="amount-btn" onclick="selectAmount(this, 50)">₱50 <small>+10 pts</small></button>
+    <button class="amount-btn" onclick="selectAmount(this, 100)">₱100 <small>+25 pts</small></button>
+    <button class="amount-btn" onclick="selectAmount(this, 250)">₱250 <small>+65 pts</small></button>
+    <button class="amount-btn" onclick="selectAmount(this, 500)">₱500 <small>+130 pts</small></button>
+   </div>
+   <input type="number" id="custom-amount" placeholder="Or enter custom amount (₱)" class="custom-input"/>
+   <button class="btn-primary w100" onclick="confirmDonate()">Confirm Donation</button>
+   <p class="modal-note">This is a static demo — no real transaction is processed.</p>
+  </div>
  </div>
 
  <!-- SUCCESS TOAST -->
- <div class="toast" id="toast"> Donation recorded! +65 points added.</div>
+ <div class="toast" id="toast">🎉 Donation recorded! Points added to your account.</div>
 
  <footer class="footer">
- <div class="footer-inner">
- <div class="footer-brand">
- <span class="logo-leaf">//</span> AlayOnline
- <p>Alay Mula sa Puso, Abot sa Mundo.<br>A conceptual project for GES 0013.</p>
- </div>
- <div class="footer-links">
- <h4>Pages</h4>
- <a href="index.html">Home</a>
- <a href="campaigns.html">Campaigns</a>
- <a href="volunteer.html">Volunteer</a>
- <a href="leaderboard.html">Leaderboard</a>
- <a href="about.html">About</a>
- </div>
- </div>
- <div class="footer-bottom">
- <p>© 2026 AlayOnline · GES 0013 Environmental Science · Prof. Marlan T. Magdalaga, MSc</p>
- </div>
+  <div class="footer-inner">
+   <div class="footer-brand">
+    <span class="logo-leaf">//</span> AlayOnline
+    <p>Alay Mula sa Puso, Abot sa Mundo.<br>A conceptual project for GES 0013.</p>
+   </div>
+   <div class="footer-links">
+    <h4>Pages</h4>
+    <a href="index.html">Home</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="about.html">About</a>
+   </div>
+  </div>
+  <div class="footer-bottom">
+   <p>© 2026 AlayOnline · GES 0013 Environmental Science · Prof. Marlan T. Magdalaga, MSc</p>
+  </div>
  </footer>
 
  <script src="js/main.js"></script>
- <script src="js/campaigns.js"></script>
+ <script>
+  // ===== FILTER =====
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.camp-full-card');
+
+  filterBtns.forEach(btn => {
+   btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    cards.forEach(card => {
+     card.style.display = (filter === 'all' || card.dataset.cat === filter) ? 'grid' : 'none';
+    });
+   });
+  });
+
+  // ===== SEARCH =====
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) {
+   searchInput.addEventListener('input', () => {
+    const q = searchInput.value.toLowerCase();
+    cards.forEach(card => {
+     card.style.display = card.innerText.toLowerCase().includes(q) ? 'grid' : 'none';
+    });
+   });
+  }
+
+  // ===== DONATE MODAL =====
+  function openDonate(name) {
+   document.getElementById('modal-campaign-name').textContent = name;
+   document.getElementById('donateModal').classList.add('open');
+   event.preventDefault();
+  }
+  function closeDonate() {
+   document.getElementById('donateModal').classList.remove('open');
+   document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+  }
+  function selectAmount(btn) {
+   document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+   btn.classList.add('selected');
+  }
+  function confirmDonate() {
+   closeDonate();
+   const t = document.getElementById('toast');
+   t.textContent = '🎉 Donation recorded! Points added to your account.';
+   t.classList.add('show');
+   setTimeout(() => t.classList.remove('show'), 3500);
+  }
+  document.getElementById('donateModal').addEventListener('click', function(e) {
+   if (e.target === this) closeDonate();
+  });
+ </script>
 </body>
 </html>
