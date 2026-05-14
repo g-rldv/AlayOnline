@@ -9,12 +9,26 @@
  <link rel="stylesheet" href="css/style.css">
  <style>
   /* Fix for disappearing buttons and card layout */
-  .vol-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
-    padding-bottom: 50px; /* Space at the bottom of the grid */
-  }
+   .vol-grid {
+     display: grid;
+     /* This creates exactly 3 equal columns */
+     grid-template-columns: repeat(3, 1fr); 
+     gap: 30px;
+     padding-bottom: 50px;
+   }
+   
+   /* Optional: Add a media query so it stacks on mobile devices */
+   @media (max-width: 992px) {
+     .vol-grid {
+       grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+     }
+   }
+   
+   @media (max-width: 600px) {
+     .vol-grid {
+       grid-template-columns: 1fr; /* 1 column for phones */
+     }
+   }
 
   .vol-card {
     display: flex;
