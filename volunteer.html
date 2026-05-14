@@ -7,234 +7,205 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/style.css">
+ <style>
+  /* Fix for disappearing buttons and card layout */
+  .vol-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding-bottom: 50px; /* Space at the bottom of the grid */
+  }
+
+  .vol-card {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Allow card to grow with content */
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .vol-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .vol-body {
+    padding: 24px;
+    flex-grow: 1; /* Pushes footer elements down */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vol-body p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .vol-meta {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+
+  .vol-earn {
+    background: #f0f7f4;
+    color: #2d7a4e;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  /* Ensure button is always at the bottom and visible */
+  .vol-card .btn-primary {
+    margin-top: auto; 
+    display: block;
+    width: 100%;
+  }
+
+  /* Adjust headers based on image_91c2a3.png */
+  .vol-header {
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+  }
+  .green-header { background: #2d7a4e; }
+  .blue-header { background: #2a5a7a; }
+  .brown-header { background: #7a5a4a; }
+  .grey-header { background: #5a5a5a; }
+  .teal-header { background: #2a7a7a; }
+ </style>
 </head>
 <body>
 
  <nav class="navbar">
- <a href="index.html" class="logo"><span class="logo-leaf">//</span> AlayOnline</a>
- <ul class="nav-links">
- <li><a href="index.html">Home</a></li>
- <li><a href="campaigns.html">Campaigns</a></li>
- <li><a href="volunteer.html" class="active">Volunteer</a></li>
- <li><a href="leaderboard.html">Leaderboard</a></li>
- <li><a href="about.html">About</a></li>
- </ul>
- <a href="campaigns.html" class="btn-primary nav-cta">Get Started</a>
- <button class="hamburger" id="hamburger">&#9776;</button>
+  <a href="index.html" class="logo"><span class="logo-leaf">//</span> AlayOnline</a>
+  <ul class="nav-links">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="campaigns.html">Campaigns</a></li>
+   <li><a href="volunteer.html" class="active">Volunteer</a></li>
+   <li><a href="leaderboard.html">Leaderboard</a></li>
+   <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="campaigns.html" class="btn-primary nav-cta">Get Started</a>
+  <button class="hamburger" id="hamburger">&#9776;</button>
  </nav>
 
  <section class="page-hero">
- <div class="hero-bg-blobs">
- <div class="blob blob-1"></div>
- <div class="blob blob-2"></div>
- </div>
- <div class="page-hero-content">
- <div class="section-label">Join the Movement</div>
- <h1>Volunteer Your Time,<br>Change the Planet.</h1>
- <p>Sign up for verified volunteer shifts, earn points per hour, and make a difference you can measure.</p>
- </div>
- </section>
-
- <!-- HOW VOLUNTEERING WORKS -->
- <section class="section">
- <div class="section-label">Verification System</div>
- <h2 class="section-title">How Volunteer Hours<br>Are Verified</h2>
- <div class="steps-row steps-4">
- <div class="step">
- <div class="step-number">01</div>
- <h3>Sign Up</h3>
- <p>Browse open shifts and register via the campaign action panel in two taps.</p>
- </div>
- <div class="step-arrow">→</div>
- <div class="step">
- <div class="step-number">02</div>
- <h3>Show Up</h3>
- <p>Attend your volunteer activity — clean-up, planting, survey, or training.</p>
- </div>
- <div class="step-arrow">→</div>
- <div class="step">
- <div class="step-number">03</div>
- <h3>Submit Evidence</h3>
- <p>Upload a photo or short video with timestamp and location metadata.</p>
- </div>
- <div class="step-arrow">→</div>
- <div class="step">
- <div class="step-number">04</div>
- <h3>Earn Points</h3>
- <p>Verified hours credit your account with fixed points redeemable for rewards.</p>
- </div>
- </div>
+  <div class="hero-bg-blobs">
+   <div class="blob blob-1"></div>
+   <div class="blob blob-2"></div>
+  </div>
+  <div class="page-hero-content">
+   <div class="section-label">Join the Movement</div>
+   <h1>Volunteer Your Time,<br>Change the Planet.</h1>
+   <p>Sign up for verified volunteer shifts, earn points per hour, and make a difference you can measure.</p>
+  </div>
  </section>
 
  <!-- OPEN SHIFTS -->
  <section class="section volunteer-section">
- <div class="section-label">Open Shifts</div>
- <h2 class="section-title">Find a Volunteer<br>Opportunity Near You</h2>
+  <div class="section-label">Open Shifts</div>
+  <h2 class="section-title">Find a Volunteer<br>Opportunity Near You</h2>
 
- <div class="vol-grid">
+  <div class="vol-grid">
+   <!-- Card 1 -->
+   <div class="vol-card">
+    <div class="vol-header green-header">
+     <span class="vol-org">Philippine Eagle Foundation</span>
+    </div>
+    <div class="vol-body">
+     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <h3>Eagle Habitat Survey</h3>
+        <span class="camp-tag green-tag" style="font-size:10px;">Biodiversity</span>
+     </div>
+     <p>Join biologists in the Mindanao highlands to survey eagle nesting sites and record habitat data.</p>
+     <div class="vol-meta">
+      <div>📅 April 20, 2026</div>
+      <div>📍 Kitanglad Range, Bukidnon</div>
+      <div>👥 12 slots open</div>
+     </div>
+     <div class="vol-earn">+80 pts per verified hour</div>
+     <button class="btn-primary" onclick="openVolSignup('Eagle Habitat Survey')">Sign Up</button>
+    </div>
+   </div>
 
- <div class="vol-card">
- <div class="vol-header green-header">
- <span class="vol-org">Philippine Eagle Foundation</span>
- <span class="vol-tag"> Biodiversity</span>
- </div>
- <div class="vol-body">
- <h3>Eagle Habitat Survey</h3>
- <p>Join biologists in the Mindanao highlands to survey eagle nesting sites and record habitat data.</p>
- <div class="vol-meta">
- <div class="vol-meta-item"> April 20, 2026</div>
- <div class="vol-meta-item"> 7:00 AM – 3:00 PM</div>
- <div class="vol-meta-item"> Kitanglad Range, Bukidnon</div>
- <div class="vol-meta-item"> 12 slots open</div>
- </div>
- <div class="vol-earn">+80 pts per verified hour</div>
- <button class="btn-primary w100" onclick="openVolSignup('Eagle Habitat Survey')">Sign Up</button>
- </div>
- </div>
+   <!-- Card 2 -->
+   <div class="vol-card">
+    <div class="vol-header blue-header">
+     <span class="vol-org">LLDA</span>
+    </div>
+    <div class="vol-body">
+     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <h3>Shoreline Clean-Up</h3>
+        <span class="camp-tag blue-tag" style="font-size:10px;">Water</span>
+     </div>
+     <p>Help collect waste along the Laguna de Bay shoreline and assist with water sampling in target zones.</p>
+     <div class="vol-meta">
+      <div>📅 April 26, 2026</div>
+      <div>📍 Binangonan, Rizal</div>
+      <div>👥 40 slots open</div>
+     </div>
+     <div class="vol-earn">+80 pts per verified hour</div>
+     <button class="btn-primary" onclick="openVolSignup('Laguna Bay Shoreline Clean-Up')">Sign Up</button>
+    </div>
+   </div>
 
- <div class="vol-card">
- <div class="vol-header blue-header">
- <span class="vol-org">LLDA</span>
- <span class="vol-tag"> Water</span>
- </div>
- <div class="vol-body">
- <h3>Laguna Bay Shoreline Clean-Up</h3>
- <p>Help collect waste along the Laguna de Bay shoreline and assist with water sampling in target zones.</p>
- <div class="vol-meta">
- <div class="vol-meta-item"> April 26, 2026</div>
- <div class="vol-meta-item"> 6:00 AM – 10:00 AM</div>
- <div class="vol-meta-item"> Binangonan, Rizal</div>
- <div class="vol-meta-item"> 40 slots open</div>
- </div>
- <div class="vol-earn">+80 pts per verified hour</div>
- <button class="btn-primary w100" onclick="openVolSignup('Laguna Bay Shoreline Clean-Up')">Sign Up</button>
- </div>
- </div>
-
- <div class="vol-card">
- <div class="vol-header brown-header">
- <span class="vol-org">PCSD</span>
- <span class="vol-tag"> Community</span>
- </div>
- <div class="vol-body">
- <h3>Mangrove Planting Day</h3>
- <p>Plant mangrove propagules alongside fisherfolk families on the Palawan coast. Training provided on site.</p>
- <div class="vol-meta">
- <div class="vol-meta-item"> May 3, 2026</div>
- <div class="vol-meta-item"> 7:30 AM – 12:00 PM</div>
- <div class="vol-meta-item"> Puerto Princesa, Palawan</div>
- <div class="vol-meta-item"> 25 slots open</div>
- </div>
- <div class="vol-earn">+80 pts per verified hour</div>
- <button class="btn-primary w100" onclick="openVolSignup('Mangrove Planting Day')">Sign Up</button>
- </div>
- </div>
-
- <div class="vol-card">
- <div class="vol-header grey-header">
- <span class="vol-org">EcoWaste Coalition</span>
- <span class="vol-tag"> Waste</span>
- </div>
- <div class="vol-body">
- <h3>Barangay Waste Trainer</h3>
- <p>Conduct waste segregation seminars in Cebu barangays and help set up materials recovery facility systems.</p>
- <div class="vol-meta">
- <div class="vol-meta-item"> May 10, 2026</div>
- <div class="vol-meta-item"> 8:00 AM – 5:00 PM</div>
- <div class="vol-meta-item"> Cebu City, Cebu</div>
- <div class="vol-meta-item"> 8 slots open</div>
- </div>
- <div class="vol-earn">+80 pts per verified hour</div>
- <button class="btn-primary w100" onclick="openVolSignup('Barangay Waste Trainer')">Sign Up</button>
- </div>
- </div>
-
- <div class="vol-card">
- <div class="vol-header teal-header">
- <span class="vol-org">WWF Philippines</span>
- <span class="vol-tag"> Biodiversity</span>
- </div>
- <div class="vol-body">
- <h3>Coral Nursery Diver</h3>
- <p>Certified divers assist with attaching coral fragments to nursery frames and conducting reef health surveys.</p>
- <div class="vol-meta">
- <div class="vol-meta-item"> May 17, 2026</div>
- <div class="vol-meta-item"> 6:00 AM – 2:00 PM</div>
- <div class="vol-meta-item"> Tubbataha, Sulu Sea</div>
- <div class="vol-meta-item"> 6 slots open</div>
- </div>
- <div class="vol-earn">+80 pts per verified hour</div>
- <button class="btn-primary w100" onclick="openVolSignup('Coral Nursery Diver')">Sign Up</button>
- </div>
- </div>
-
- <div class="vol-card">
- <div class="vol-header blue-header">
- <span class="vol-org">PRRC</span>
- <span class="vol-tag"> Water</span>
- </div>
- <div class="vol-body">
- <h3>Pasig River Data Volunteer</h3>
- <p>Help collect and encode water quality readings from river monitoring stations along the Pasig.</p>
- <div class="vol-meta">
- <div class="vol-meta-item"> May 24, 2026</div>
- <div class="vol-meta-item"> 8:00 AM – 12:00 PM</div>
- <div class="vol-meta-item"> Marikina/Pasig, Metro Manila</div>
- <div class="vol-meta-item"> 20 slots open</div>
- </div>
- <div class="vol-earn">+80 pts per verified hour</div>
- <button class="btn-primary w100" onclick="openVolSignup('Pasig River Data Volunteer')">Sign Up</button>
- </div>
- </div>
-
- </div>
+   <!-- Card 3 -->
+   <div class="vol-card">
+    <div class="vol-header brown-header">
+     <span class="vol-org">PCSD</span>
+    </div>
+    <div class="vol-body">
+     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <h3>Mangrove Planting</h3>
+        <span class="camp-tag brown-tag" style="font-size:10px;">Community</span>
+     </div>
+     <p>Plant mangrove propagules alongside fisherfolk families on the Palawan coast. Training provided on site.</p>
+     <div class="vol-meta">
+      <div>📅 May 3, 2026</div>
+      <div>📍 Puerto Princesa, Palawan</div>
+      <div>👥 25 slots open</div>
+     </div>
+     <div class="vol-earn">+80 pts per verified hour</div>
+     <button class="btn-primary" onclick="openVolSignup('Mangrove Planting Day')">Sign Up</button>
+    </div>
+   </div>
+  </div>
  </section>
 
- <!-- SIGN UP MODAL -->
+ <!-- MODAL -->
  <div class="modal-overlay" id="volModal">
- <div class="modal">
- <button class="modal-close" onclick="closeVolSignup()"></button>
- <h3>Sign Up: <span id="vol-shift-name"></span></h3>
- <p class="modal-sub">Fill in your details to reserve your slot.</p>
- <input type="text" placeholder="Full Name" class="form-input"/>
- <input type="email" placeholder="Email Address" class="form-input"/>
- <input type="tel" placeholder="Contact Number" class="form-input"/>
- <select class="form-input">
- <option>Any relevant skills?</option>
- <option>Data Collection</option>
- <option>Scuba Diving</option>
- <option>Community Organizing</option>
- <option>Photography/Documentation</option>
- <option>None – eager to learn!</option>
- </select>
- <button class="btn-primary w100" onclick="confirmVol()">Reserve My Slot</button>
- <p class="modal-note">This is a static demo — no data is submitted.</p>
- </div>
+  <div class="modal">
+   <button class="modal-close" onclick="closeVolSignup()">✕</button>
+   <h3>Sign Up: <span id="vol-shift-name"></span></h3>
+   <input type="text" placeholder="Full Name" class="form-input" style="width:100%; margin:10px 0; padding:10px;"/>
+   <button class="btn-primary w100" onclick="confirmVol()">Reserve My Slot</button>
+  </div>
  </div>
 
- <div class="toast" id="toast"> Slot reserved! Check your email for details.</div>
+ <div class="toast" id="toast">Slot reserved! Check your email.</div>
 
- <footer class="footer">
- <div class="footer-inner">
- <div class="footer-brand">
- <span class="logo-leaf">//</span> AlayOnline
- <p>Alay Mula sa Puso, Abot sa Mundo.<br>A conceptual project for GES 0013.</p>
- </div>
- <div class="footer-links">
- <h4>Pages</h4>
- <a href="index.html">Home</a>
- <a href="campaigns.html">Campaigns</a>
- <a href="volunteer.html">Volunteer</a>
- <a href="leaderboard.html">Leaderboard</a>
- <a href="about.html">About</a>
- </div>
- </div>
- <div class="footer-bottom">
- <p>© 2026 AlayOnline · GES 0013 Environmental Science · Prof. Marlan T. Magdalaga, MSc</p>
- </div>
- </footer>
-
- <script src="js/main.js"></script>
- <script src="js/volunteer.js"></script>
+ <script>
+  function openVolSignup(name) {
+    document.getElementById('vol-shift-name').innerText = name;
+    document.getElementById('volModal').style.display = 'flex';
+  }
+  function closeVolSignup() {
+    document.getElementById('volModal').style.display = 'none';
+  }
+  function confirmVol() {
+    closeVolSignup();
+    const t = document.getElementById('toast');
+    t.style.display = 'block';
+    setTimeout(() => { t.style.display = 'none'; }, 3000);
+  }
+ </script>
 </body>
 </html>
