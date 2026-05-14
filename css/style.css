@@ -227,7 +227,7 @@ em { font-style: italic; color: var(--green-mid); }
   align-items: center;
   gap: 3rem;
   padding: 5rem 6% 4rem;
-  min-height: 88vh;
+  min-height: 95vh;
   overflow: hidden;
 }
 .hero-content { position: relative; z-index: 1; }
