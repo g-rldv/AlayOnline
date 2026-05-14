@@ -7,6 +7,53 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/style.css">
+ <style>
+  /* --- HOME PAGE CAMPAIGN IMAGE STYLES --- */
+  .camp-img-container {
+    width: 100%;
+    height: 240px; 
+    overflow: hidden;
+    position: relative;
+    background: #f0f0f0;
+  }
+
+  .featured-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .camp-card:hover .featured-photo {
+    transform: scale(1.08);
+  }
+
+  /* NGO Label Overlay */
+  .ngo-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+
+  /* Descriptions Clipping (Keeps cards uniform) */
+  .camp-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 4.5em;
+  }
+ </style>
 </head>
 <body>
 
